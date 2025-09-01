@@ -387,3 +387,83 @@ Strings:
 4.  **Look at old code only if stuck.**
 
 5.  **Mark tough ones** (🔴) → recheck on last day
+
+# 🔍 Searching & Sorting in DSA  
+
+This section covers the most important *Searching* and *Sorting* algorithms in Data Structures & Algorithms, along with the problems I solved for practice.  
+
+---
+
+## 📘 Introduction  
+
+### 🔎 Searching
+Searching is the process of finding an element inside a data structure.  
+
+| Algorithm       | Best Case | Worst Case | Space |
+|-----------------|-----------|------------|-------|
+| Linear Search   | O(1)      | O(n)       | O(1) |
+| Binary Search   | O(1)      | O(log n)   | O(1) |
+
+---
+
+### 🔄 Sorting  
+Sorting arranges data in ascending or descending order.  
+
+| Algorithm       | Best Case | Worst Case | Average | Space |
+|-----------------|-----------|------------|---------|-------|
+| Bubble Sort     | O(n)      | O(n²)      | O(n²)  | O(1) |
+| Selection Sort  | O(n²)     | O(n²)      | O(n²)  | O(1) |
+| Insertion Sort  | O(n)      | O(n²)      | O(n²)  | O(1) |
+| Merge Sort      | O(n log n)| O(n log n) | O(n log n) | O(n) |
+| Quick Sort      | O(n log n)| O(n²)      | O(n log n) | O(log n) |
+| Counting Sort   | O(n+k)    | O(n+k)     | O(n+k) | O(n+k) |
+
+---
+
+## 📝 Problem List  
+
+Here are the problems I solved in *Searching & Sorting* (with short descriptions):  
+
+### 🔹 Sorting Algorithms
+- *BubbleSort.java* → Simple comparison-based sort.  
+- *SelectionSort.java* → Selects minimum and places at correct position.  
+- *InsertionSort.java* → Inserts elements one by one into the correct position.  
+- *MergeSort.java* → Divide & Conquer algorithm, stable sorting.  
+- *DutchNationalFlag.java* → Sort colors (0s, 1s, 2s).  
+- *MaxProductAndKTHLARGEST.java* → Find max product & Kth largest element.  
+- *MaxprodOptimized.java* → Optimized approach for max product subarray.  
+
+---
+
+### 🔹 Searching Problems
+- *LinearSearch.java* → Basic linear search.  
+- *BinarySearch.java* → Classic binary search in sorted array.  
+- *FirstAndLastOccur.java* → Find first & last occurrence of an element.  
+- *SearchInRotated.java* → Search element in rotated sorted array.  
+- *FindMinRotated.java* → Find minimum in rotated sorted array.  
+- *SquareRoot.java* → Square root using binary search.  
+- *PeakElement.java* → Find peak element in array.  
+- *TwoSum.java* → Classic two-sum problem using binary search/2-pointer.  
+
+---
+
+### 🔹 Advanced Problems (Binary Search on Answer)
+- *AggresiveCows.java* → Place cows in stalls with max distance.  
+- *AllocatePages.java* → Allocate minimum pages to students.  
+- *PaintersPartition.java* → Partition problem using binary search.  
+- *MedianTwoSorted.java* → Find median of two sorted arrays.  
+- *KthElementTwoSorted.java* → Find kth element from two sorted arrays.  
+- *MinimumPlatforms.java* → Find minimum platforms required for trains.  
+
+---
+
+### 🔹 Miscellaneous Problems
+- *CountElements.java / CountElementsOpti.java* → Count smaller elements.  
+- *RepeatingMissing.java* → Find repeating and missing number in array.  
+- *SortCharacByFreq.java* → Sort characters by frequency.  
+- *MergeIntervals.java* → Merge overlapping intervals.  
+- *InversionCount.java* → Count inversions in array (merge sort logic).  
+
+---
+
+## 📂 Folder Structure
