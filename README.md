@@ -1,7 +1,7 @@
 # 📘 DSA Preparation Repository
 
 This repository contains my **Data Structures & Algorithms (DSA)** practice, organized topic-wise.  
-I use it to practice for placements (6–10 LPA target) and to keep **notes + code** in one place.  
+I use it to practice for placements and to keep **notes + code** in one place.  
 
 ---
 
@@ -42,7 +42,7 @@ These notes cover **Arrays + Strings**:
 ---
 
 ## 🎯 Placement Strategy
-- Revise Arrays + Strings fully (80 problems).  
+- Revise Arrays + Strings.  
 - Next → Linked List, Stack, Queue, Binary Search.  
 - Later → Trees, Graphs, DP basics.  
 - Target ~200–250 quality problems before placements.  
@@ -59,7 +59,7 @@ These notes cover **Arrays + Strings**:
 ### ✨ Author
 **Raheem**  
 - 🎓 B.Tech CSE Student  
-- 🎯 Aspiring Software Engineer (6–10 LPA Target)  
+- 🎯 Aspiring Software Engineer
 - 💻 Focus: DSA, Java, AI/ML  
 
 ---
