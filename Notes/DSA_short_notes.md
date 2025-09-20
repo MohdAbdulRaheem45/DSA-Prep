@@ -466,13 +466,15 @@ Here are the problems I solved in *Searching & Sorting* (with short descriptions
 
 ---
 
-## 📂 Folder Structure
-📚 Linked List Notes – Placement Guide
-Introduction
+# 📚 Linked List Notes – Placement Guide
 
+## Introduction
 A Linked List is a linear data structure where elements are stored in nodes, and each node points to the next node. Unlike arrays, linked lists are non-contiguous in memory, allowing dynamic size changes.
 
-Node Structure (Java)
+---
+
+## Node Structure (Java)
+```java
 class Node {
     int data;   // value
     Node next;  // pointer to next node
@@ -481,93 +483,10 @@ class Node {
         next = null;
     }
 }
+<img width="767" height="725" alt="image" src="https://github.com/user-attachments/assets/b250145b-213a-4c4d-b948-3ceea95f3c0c" />
+<img width="750" height="731" alt="image" src="https://github.com/user-attachments/assets/ea36d54f-08fe-420d-9670-a1992a7684f4" />
+<img width="734" height="786" alt="image" src="https://github.com/user-attachments/assets/5780a6f6-223e-4520-a689-c5f8fe22ea00" />
+<img width="752" height="735" alt="image" src="https://github.com/user-attachments/assets/7733dd39-4498-4269-b78b-0081797cd380" />
 
 
-Memory Example:
 
-[10|next] -> [20|next] -> [30|next] -> null
-head -> 10
-
-1. Basics & Implementation
-Problem	Approach	Time Complexity
-Create a Linked List	Create nodes, link using next	O(1) per node
-Insert at Beginning	New node's next = head; head = new node	O(1)
-Insert at End	Traverse to last node, set last.next = new node	O(n)
-Insert at Position	Traverse to pos-1, adjust pointers	O(n)
-Delete from Beginning	head = head.next	O(1)
-Delete from End	Traverse to second last, set secondLast.next = null	O(n)
-Delete from Position	Traverse to pos-1, adjust pointers	O(n)
-Search an Element	Traverse, compare values	O(n)
-Print Linked List	Traverse, print data	O(n)
-
-Tips:
-
-Always check for head == null (empty list).
-
-Use diagrams to visualize pointer adjustments.
-
-2. Important Placement Problems
-Problem	Approach	Time Complexity
-Reverse Linked List (Iterative)	Use 3 pointers: prev, curr, next; reverse next links	O(n)
-Reverse Linked List (Recursive)	Recursively reverse the list, adjust next	O(n)
-Find Middle Node	Use slow & fast pointer; slow moves 1 step, fast moves 2 steps	O(n)
-Detect Cycle	Floyd’s Tortoise & Hare; slow and fast pointers meet if cycle exists	O(n)
-Remove Cycle	Detect meeting point, use pointer to find start of cycle, set previous.next = null	O(n)
-Merge Two Sorted Lists	Two pointers traverse both lists, attach smaller node to result list	O(n + m)
-Intersection of Two Lists	Two pointer approach: switch heads when null; first meeting point is intersection	O(n + m)
-Palindrome Check	Find middle, reverse second half, compare two halves	O(n)
-Add Two Numbers	Traverse both lists, sum node values + carry, create new nodes for result	O(max(n, m))
-Remove Nth Node from End	Compute length, find (len-n+1)th node, adjust pointers	O(n)
-Rotate List by k	k = k % length, use reverse function or adjust next pointers	O(n)
-Memory / Pointer Visualization Examples
-Reverse Iterative
-
-Before:
-
-head -> 10 -> 20 -> 30 -> null
-
-
-After:
-
-head -> 30 -> 20 -> 10 -> null
-
-
-Pointers used: prev, curr, next
-
-Detect Cycle
-
-Example: 1 -> 2 -> 3 -> 4 -> 2 (cycle back to 2)
-
-Slow and fast pointers eventually meet inside the cycle.
-
-Use slow and fast to detect and break the cycle.
-
-Merge Two Sorted Lists
-List1: 1 -> 3 -> 5
-List2: 2 -> 4 -> 6
-Merged: 1 -> 2 -> 3 -> 4 -> 5 -> 6
-
-
-Use a dummy node and tail pointer to build merged list.
-
-Intersection of Two Lists
-ListA: 10 -> 20 -> 30 \
-                          -> 40 -> 50
-ListB: 15 --------------/
-Intersection at node 40
-
-
-Two-pointer approach ensures O(n+m) time without extra space.
-
-3. Tips for Placements
-
-Draw diagrams for each operation.
-
-Dry-run on paper with examples before coding.
-
-Solve each problem at least twice.
-
-Focus on pointer manipulation, null checks, and edge cases (empty list, single node).
-
-✅ Conclusion:
-If you complete these problems and understand the memory/pointers, Linked List is placement-ready.
