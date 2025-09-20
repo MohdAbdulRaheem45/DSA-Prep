@@ -483,10 +483,134 @@ class Node {
         next = null;
     }
 }
-<img width="767" height="725" alt="image" src="https://github.com/user-attachments/assets/b250145b-213a-4c4d-b948-3ceea95f3c0c" />
-<img width="750" height="731" alt="image" src="https://github.com/user-attachments/assets/ea36d54f-08fe-420d-9670-a1992a7684f4" />
-<img width="734" height="786" alt="image" src="https://github.com/user-attachments/assets/5780a6f6-223e-4520-a689-c5f8fe22ea00" />
-<img width="752" height="735" alt="image" src="https://github.com/user-attachments/assets/7733dd39-4498-4269-b78b-0081797cd380" />
+Memory Example:
+[10|next] -> [20|next] -> [30|next] -> null
+head -> 10
+
+Basics & Implementation:
+
+Create a Linked List
+Create nodes and link them using next pointers.
+Each node points to the next node; last node points to null.
+
+Insert at Beginning
+Make new node's next = head, then update head = new node.
+Time Complexity: O(1)
+
+Insert at End
+Traverse to last node, then set last.next = new node.
+Time Complexity: O(n)
+
+Insert at Position
+Traverse to position-1, adjust pointers: newNode.next = temp.next; temp.next = newNode.
+Time Complexity: O(n)
+
+Delete from Beginning
+head = head.next
+Time Complexity: O(1)
+
+Delete from End
+Traverse to second last node, then secondLast.next = null
+Time Complexity: O(n)
+
+Delete from Position
+Traverse to position-1, then temp.next = temp.next.next
+Time Complexity: O(n)
+
+Search an Element
+Traverse the list, compare each node's data with key.
+Time Complexity: O(n)
+
+Print Linked List
+Traverse the list and print each node's data.
+Time Complexity: O(n)
+
+Tips:
+Always check for head == null.
+Use diagrams to visualize pointer updates.
+
+Important Placement Problems:
+
+Reverse Linked List (Iterative)
+Use three pointers: prev, curr, next.
+Reverse the next links while traversing.
+Time Complexity: O(n)
+
+Reverse Linked List (Recursive)
+Recursively reverse the list and adjust next pointers during unwind.
+Time Complexity: O(n)
+
+Find Middle Node
+Use slow & fast pointer approach: slow moves 1 step, fast moves 2 steps.
+Slow ends at middle node.
+Time Complexity: O(n)
+
+Detect Cycle
+Use Floyd’s Tortoise & Hare method.
+Slow and fast pointers meet if cycle exists.
+Time Complexity: O(n)
+
+Remove Cycle
+Detect meeting point, find start of cycle, then set previous node’s next = null.
+Time Complexity: O(n)
+
+Merge Two Sorted Lists
+Traverse both lists with two pointers, attach the smaller node to a new merged list.
+Time Complexity: O(n + m)
+
+Intersection of Two Lists
+Use two pointers: switch heads when reaching end.
+First meeting point is intersection node.
+Time Complexity: O(n + m)
+
+Palindrome Check
+Find middle, reverse second half, compare two halves.
+Time Complexity: O(n)
+
+Add Two Numbers
+Traverse both lists, sum corresponding nodes + carry, create new nodes for result.
+Time Complexity: O(max(n, m))
+
+Remove Nth Node from End
+Compute length, find (length - n + 1)th node, adjust pointers.
+Time Complexity: O(n)
+
+Rotate List by k
+Compute k = k % length.
+Rotate using reverse technique or adjust pointers.
+Time Complexity: O(n)
+
+Memory / Pointer Visualization Examples:
+Reverse Iterative:
+Before:
+head -> 10 -> 20 -> 30 -> null
+After:
+head -> 30 -> 20 -> 10 -> null
+Pointers used: prev, curr, next
+
+Detect Cycle Example:
+1 -> 2 -> 3 -> 4 -> 2 (cycle back to 2)\
+Slow and fast pointers meet inside the cycle.
+Use this to detect and break the cycle.
+
+Merge Two Sorted Lists Example:
+List1: 1 -> 3 -> 5
+List2: 2 -> 4 -> 6
+Merged: 1 -> 2 -> 3 -> 4 -> 5 -> 6
+Use a dummy node and tail pointer to build merged list.
+
+Intersection of Two Lists Example:
+ListA: 10 -> 20 -> 30 \
+                          -> 40 -> 50
+ListB: 15 --------------/
+Intersection at node 40
+Two-pointer approach ensures O(n+m) time without extra space.
+
+Tips for Placements:
+Draw diagrams for each operation.
+Dry-run on paper before coding.
+Solve each problem at least twice.
+Focus on pointer manipulation, null checks, and edge cases (empty list, single node).
 
 
 
