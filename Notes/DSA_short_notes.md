@@ -465,15 +465,15 @@ Here are the problems I solved in *Searching & Sorting* (with short descriptions
 - *InversionCount.java* → Count inversions in array (merge sort logic).  
 
 ---
-
 # 📚 Linked List Notes – Placement Guide
 
-## Introduction
-A Linked List is a linear data structure where elements are stored in nodes, and each node points to the next node. Unlike arrays, linked lists are non-contiguous in memory, allowing dynamic size changes.
+## 🧠 Introduction
+A **Linked List** is a linear data structure where elements are stored in nodes, and each node points to the next node.  
+Unlike arrays, linked lists are **non-contiguous in memory**, allowing **dynamic size changes**.
 
 ---
 
-## Node Structure (Java)
+## ⚙️ Node Structure (Java)
 ```java
 class Node {
     int data;   // value
@@ -483,134 +483,165 @@ class Node {
         next = null;
     }
 }
-Memory Example:
+🧩 Memory Example
+rust
+Copy code
 [10|next] -> [20|next] -> [30|next] -> null
 head -> 10
-
-Basics & Implementation:
-
-Create a Linked List
+🔧 Basics & Implementation
+1. Create a Linked List
 Create nodes and link them using next pointers.
 Each node points to the next node; last node points to null.
 
-Insert at Beginning
+2. Insert at Beginning
 Make new node's next = head, then update head = new node.
 Time Complexity: O(1)
 
-Insert at End
-Traverse to last node, then set last.next = new node.
+3. Insert at End
+Traverse to last node, then set last.next = newNode.
 Time Complexity: O(n)
 
-Insert at Position
-Traverse to position-1, adjust pointers: newNode.next = temp.next; temp.next = newNode.
+4. Insert at Position
+Traverse to position - 1, then:
+
+java
+Copy code
+newNode.next = temp.next;
+temp.next = newNode;
 Time Complexity: O(n)
 
-Delete from Beginning
-head = head.next
+5. Delete from Beginning
+java
+Copy code
+head = head.next;
 Time Complexity: O(1)
 
-Delete from End
-Traverse to second last node, then secondLast.next = null
+6. Delete from End
+Traverse to second last node, then:
+
+java
+Copy code
+secondLast.next = null;
 Time Complexity: O(n)
 
-Delete from Position
-Traverse to position-1, then temp.next = temp.next.next
+7. Delete from Position
+java
+Copy code
+temp.next = temp.next.next;
 Time Complexity: O(n)
 
-Search an Element
-Traverse the list, compare each node's data with key.
+8. Search an Element
+Traverse and compare each node’s data with key.
 Time Complexity: O(n)
 
-Print Linked List
-Traverse the list and print each node's data.
+9. Print Linked List
+Traverse and print node data.
 Time Complexity: O(n)
 
 Tips:
-Always check for head == null.
-Use diagrams to visualize pointer updates.
 
-Important Placement Problems:
+Always check for head == null
 
-Reverse Linked List (Iterative)
-Use three pointers: prev, curr, next.
-Reverse the next links while traversing.
+Visualize pointer updates using diagrams
+
+💥 Important Placement Problems
+🔁 Reverse Linked List (Iterative)
+Use 3 pointers: prev, curr, next.
+Reverse next links while traversing.
 Time Complexity: O(n)
 
-Reverse Linked List (Recursive)
-Recursively reverse the list and adjust next pointers during unwind.
+🔄 Reverse Linked List (Recursive)
+Recursively reverse and fix next during unwind.
 Time Complexity: O(n)
 
-Find Middle Node
-Use slow & fast pointer approach: slow moves 1 step, fast moves 2 steps.
-Slow ends at middle node.
+⚖️ Find Middle Node
+Use slow & fast pointers.
+When fast reaches end, slow is at middle.
 Time Complexity: O(n)
 
-Detect Cycle
-Use Floyd’s Tortoise & Hare method.
-Slow and fast pointers meet if cycle exists.
+🌀 Detect Cycle
+Use Floyd’s Tortoise & Hare algorithm.
+If slow == fast at any point → cycle exists.
 Time Complexity: O(n)
 
-Remove Cycle
-Detect meeting point, find start of cycle, then set previous node’s next = null.
+✂️ Remove Cycle
+After detection, find start of cycle and make the previous node’s next = null.
 Time Complexity: O(n)
 
-Merge Two Sorted Lists
-Traverse both lists with two pointers, attach the smaller node to a new merged list.
+🔀 Merge Two Sorted Lists
+Traverse both lists with two pointers; attach smaller node each time.
 Time Complexity: O(n + m)
 
-Intersection of Two Lists
-Use two pointers: switch heads when reaching end.
-First meeting point is intersection node.
+🔗 Intersection of Two Lists
+Use two pointers; when one reaches null, switch to other head.
+Meeting point → intersection node.
 Time Complexity: O(n + m)
 
-Palindrome Check
-Find middle, reverse second half, compare two halves.
+🔄 Palindrome Check
+Find middle → reverse second half → compare both halves.
 Time Complexity: O(n)
 
-Add Two Numbers
-Traverse both lists, sum corresponding nodes + carry, create new nodes for result.
+➕ Add Two Numbers
+Traverse both lists; sum data + carry, store in new list.
 Time Complexity: O(max(n, m))
 
-Remove Nth Node from End
-Compute length, find (length - n + 1)th node, adjust pointers.
+❌ Remove Nth Node from End
+Find (length - n + 1)th node → delete.
 Time Complexity: O(n)
 
-Rotate List by k
-Compute k = k % length.
-Rotate using reverse technique or adjust pointers.
+🔁 Rotate List by k
+k = k % length → adjust pointers or use reverse technique.
 Time Complexity: O(n)
 
-Memory / Pointer Visualization Examples:
-Reverse Iterative:
+🧠 Memory / Pointer Visualization
+🧭 Reverse Iterative
 Before:
 head -> 10 -> 20 -> 30 -> null
 After:
 head -> 30 -> 20 -> 10 -> null
-Pointers used: prev, curr, next
+Pointers Used: prev, curr, next
 
-Detect Cycle Example:
-1 -> 2 -> 3 -> 4 -> 2 (cycle back to 2)\
-Slow and fast pointers meet inside the cycle.
-Use this to detect and break the cycle.
+🧿 Detect Cycle Example
+1 -> 2 -> 3 -> 4 -> 2 (cycle back to 2)
+Slow and fast meet inside cycle → confirms cycle.
 
-Merge Two Sorted Lists Example:
+🔂 Merge Two Sorted Lists Example
+rust
+Copy code
 List1: 1 -> 3 -> 5
 List2: 2 -> 4 -> 6
 Merged: 1 -> 2 -> 3 -> 4 -> 5 -> 6
-Use a dummy node and tail pointer to build merged list.
+Use a dummy node and tail pointer.
 
-Intersection of Two Lists Example:
+🔁 Intersection of Two Lists Example
+rust
+Copy code
 ListA: 10 -> 20 -> 30 \
                           -> 40 -> 50
 ListB: 15 --------------/
-Intersection at node 40
-Two-pointer approach ensures O(n+m) time without extra space.
+Intersection at node 40.
+Two-pointer trick → O(n + m) and no extra space.
 
-Tips for Placements:
+🎯 Placement Tips
 Draw diagrams for each operation.
-Dry-run on paper before coding.
-Solve each problem at least twice.
-Focus on pointer manipulation, null checks, and edge cases (empty list, single node).
+
+Dry-run before coding.
+
+Practice each question twice.
+
+Handle edge cases: null, 1-node, k > length.
+
+Focus on pointer logic — it's key to cracking Linked List rounds.
+
+👨‍💻 Master these and Linked Lists will never trouble you again!
+🔥 Happy Coding & All the Best for Placements!
+
+yaml
+Copy code
+
+---
+
+Would you like me to make it look more **GitHub-fancy** (like adding emojis for each section header, a collapsible “Problems” list, and table of complexities)?
 
 
 # 🌳 Trees & Binary Search Trees (BST) – Complete Notes
