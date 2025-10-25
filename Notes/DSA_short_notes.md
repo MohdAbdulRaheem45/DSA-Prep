@@ -613,4 +613,302 @@ Solve each problem at least twice.
 Focus on pointer manipulation, null checks, and edge cases (empty list, single node).
 
 
+# 🌳 Trees & Binary Search Trees (BST) – Complete Notes
+
+## 🧠 Introduction
+
+A **Tree** is a hierarchical data structure made up of **nodes**, where one node (the root) connects to others (children) via edges.  
+The top node is called the **root**, and nodes with no children are **leaves**.
+
+### 🧩 Basic Terminology
+
+| Term | Meaning |
+|------|----------|
+| Root | Top-most node of the tree |
+| Parent | A node that has child nodes |
+| Child | Node connected below a parent |
+| Leaf | Node with no children |
+| Height | Longest path from root to a leaf |
+| Depth | Distance of a node from root |
+| Binary Tree | Each node has ≤ 2 children |
+| Binary Search Tree (BST) | Binary Tree where: left < root < right |
+
+---
+
+## 🌱 1. Tree Basics
+
+| Problem | Concept | Approach |
+|----------|----------|----------|
+| Count total nodes | Tree traversal | Recursive count of all nodes |
+| Count leaf nodes | Base case: node with no children | DFS + count when node.left==null && node.right==null |
+| Height / Depth of tree | Max depth of subtrees | `height = 1 + max(left, right)` |
+| Sum of all nodes | Recursively sum all node values | DFS |
+| Max / Min value in tree | Compare all node values | DFS |
+
+---
+
+## 🌳 2. Tree Traversals
+
+| Type | Order | Iterative / Recursive |
+|------|--------|-----------------------|
+| Preorder | Root → Left → Right | Stack / Recursion |
+| Inorder | Left → Root → Right | Stack / Recursion |
+| Postorder | Left → Right → Root | Stack (two stacks) / Recursion |
+| Level Order (BFS) | Level by level | Queue |
+
+**Example Files:**
+- `PreorderTraversal.java`
+- `InorderTraversal.java`
+- `PostorderTraversal.java`
+- `LevelOrderTraversal.java`
+
+---
+
+## 🌴 3. Standard Binary Tree Problems
+
+| Problem | LeetCode / GFG | Approach |
+|----------|----------------|-----------|
+| Identical Trees | LC 100 | Recursively check left & right |
+| Subtree of Another Tree | LC 572 | Compare roots recursively |
+| Diameter of Binary Tree | LC 543 | `diameter = leftHeight + rightHeight` |
+| Transform to Sum Tree | GFG | Replace node with sum of its subtree |
+| Count nodes at Kth level | GFG | BFS level tracking |
+| Max Depth / Height | LC 104 | Recursive DFS |
+| Binary Tree Paths | LC 257 | Backtracking with path list |
+| Path Sum Exists | LC 112 | DFS sum check |
+| Path Sum II – All Paths | LC 113 | DFS + backtrack list |
+| Maximum Width of Binary Tree | LC 662 | Level order + index mapping |
+
+---
+
+## 🌲 4. Binary Search Tree (BST)
+
+**Properties**
+- Left subtree < Root < Right subtree  
+- Inorder traversal → Sorted order
+
+| Problem | LeetCode / GFG | Approach |
+|----------|----------------|-----------|
+| Validate BST | LC 98 | Range check for each node |
+| Search in BST | GFG | Recursive / Iterative traversal |
+| Insert in BST | GFG | Recursive insertion |
+| Delete in BST | GFG | Handle 3 cases (0, 1, 2 children) |
+| Find Min / Max in BST | GFG | Go extreme left/right |
+
+---
+
+## 🍃 5. Advanced BST Problems
+
+| Problem | LeetCode / GFG | Approach |
+|----------|----------------|-----------|
+| Kth Smallest in BST | LC 230 | Inorder traversal count |
+| Kth Largest in BST | GFG | Reverse inorder count |
+| Lowest Common Ancestor in BST | LC 235 | Move left/right based on values |
+| Min Distance between BST nodes | LC 783 | Inorder traversal + diff |
+| Merge Two BSTs | GFG | Inorder merge of two sorted arrays |
+
+---
+
+## 🌿 6. Tree Construction
+
+| Problem | LeetCode / GFG | Approach |
+|----------|----------------|-----------|
+| Build Tree from Preorder & Inorder | LC 105 | Recursion + map for inorder index |
+| Construct BST from Preorder | GFG | Range-based recursion |
+| Convert Sorted Array → Balanced BST | LC 108 | Mid element as root |
+| Flatten Binary Tree to Linked List | LC 114 | Recursion + pointer logic |
+| Recover BST | LC 99 | Find two swapped nodes using inorder |
+
+---
+
+## 🔥 7. Optional / Harder (Do only if time allows)
+
+| Problem | LeetCode / GFG | Approach |
+|----------|----------------|-----------|
+| Largest BST in Binary Tree | GFG | Postorder with struct return |
+| BST Iterator | LC 173 | Stack + controlled inorder traversal |
+| Inorder Predecessor & Successor | GFG | Recursive search |
+| Morris Inorder Traversal | Theory | Inorder without stack or recursion |
+
+---
+
+## ✅ Placement Focus Summary
+
+- **Service-based companies:** Basics + standard binary tree + basic BST → (~18 – 20 problems)
+- **Product-based companies:** Add advanced BST + construction + optional → (~25 – 28 problems)
+
+---
+
+## 📚 Resources
+- [LeetCode – Tree Tag](https://leetcode.com/tag/tree/)
+- [GeeksforGeeks – Tree Problems](https://www.geeksforgeeks.org/data-structures/tree/)
+- [Visual Algo Tree Animations](https://visualgo.net/en/bst)
+
+---
+
+> 🧩 **Tip:** Always visualize the tree using diagrams.  
+> Practice writing recursive and iterative traversals — these are the backbone of all tree problems.
+
+
+# 🕸️ Graphs – Complete Notes
+
+## 🧠 Introduction
+
+A **Graph** is a collection of **nodes (vertices)** and **edges** that connect pairs of nodes.  
+They are used to represent relationships like social networks, maps, dependencies, and networks.
+
+### 📘 Basic Terminology
+
+| Term | Meaning |
+|------|----------|
+| Vertex / Node | Fundamental unit of a graph |
+| Edge | Connection between two vertices |
+| Directed Graph | Edges have direction (A → B) |
+| Undirected Graph | Edges have no direction (A – B) |
+| Weighted Graph | Each edge has a weight or cost |
+| Path | Sequence of vertices connected by edges |
+| Cycle | Path that starts and ends at same node |
+| Connected Graph | Every vertex is reachable from another |
+| Component | A disconnected part of a graph |
+
+---
+
+## ⚙️ Graph Representation
+
+| Type | Description | Code Idea |
+|------|--------------|-----------|
+| Adjacency Matrix | 2D array where `matrix[u][v]=1` if edge exists | Good for dense graphs |
+| Adjacency List | Array of lists for each node | Efficient for sparse graphs |
+| Edge List | List of all edges with weights (for Kruskal’s) | Used in MST algorithms |
+
+**Example File:**  
+`GraphBasics.java`
+
+---
+
+## 🚶 1. Graph Traversal (BFS / DFS)
+
+| Problem | Concept | Approach |
+|----------|----------|----------|
+| BFS Traversal | Level order traversal of graph | Use Queue; track visited |
+| DFS Traversal | Depth-first traversal | Use recursion or Stack |
+| Connected Components | Count disconnected parts | Run DFS for every unvisited node |
+| Clone Graph | Copy the same structure | BFS/DFS + HashMap<Node,Clone> |
+
+**Example Files:**  
+- `BFSTraversalGraph.java`  
+- `DFSTraversalGraph.java`  
+- `ConnectedComponents.java`  
+- `CloneGraph.java`
+
+---
+
+## 🔄 2. Cycle Detection
+
+| Type | Problem | Approach |
+|------|----------|----------|
+| Undirected Graph | Detect cycle in undirected | BFS/DFS + parent tracking |
+| Directed Graph | Detect cycle in directed | DFS + recursion stack OR Kahn’s algo |
+
+**Example Files:**  
+- `CycleDetectionInUndirected.java`  
+- `DirectedCycleDetectionDFS.java`
+
+---
+
+## 🧮 3. Shortest Path Algorithms
+
+| Algorithm | Graph Type | Concept | Time Complexity |
+|------------|-------------|----------|----------------|
+| BFS (Unweighted) | Unweighted graph | Level order traversal gives shortest path | O(V + E) |
+| Dijkstra’s | Weighted graph (no negative) | PriorityQueue + distance array | O((V+E) log V) |
+| Bellman-Ford | Weighted (handles negative weights) | Relax edges (V−1) times | O(V × E) |
+
+**Example Files:**  
+- `BFSSimpleShortestPath.java`  
+- `DijkstraAlgoPriorityQueue.java`  
+- `BellmanFord.java`
+
+---
+
+## 🏗️ 4. Minimum Spanning Tree (MST)
+
+### 🌿 Kruskal’s Algorithm
+- Sort all edges by weight  
+- Pick smallest edge that doesn’t form a cycle (Union-Find)  
+- Continue until all nodes connected  
+
+### 🌲 Prim’s Algorithm
+- Start from any node  
+- Pick the smallest edge leading to an unvisited node  
+- Use MinHeap (PriorityQueue)
+
+**Example Files:**  
+- `KruskalsMst.java`  
+- `PrimsMST.java`
+
+---
+
+## 🔁 5. Topological Sorting (Directed Acyclic Graphs – DAG)
+
+| Type | Concept | Key Idea |
+|------|----------|----------|
+| DFS-based | Postorder reverse | Push to stack when recursion ends |
+| BFS-based (Kahn’s) | Count in-degree | Add 0 in-degree nodes to queue |
+
+**Example Files:**  
+- `TopologicalSortDFS.java`  
+- `TopologicalSortUsingBfs.java`
+
+---
+
+## 🌍 6. Grid / Matrix Graph Problems
+
+These can be treated as graphs where each cell is a node and edges connect adjacent cells.
+
+| Problem | LeetCode / GFG | Approach |
+|----------|----------------|-----------|
+| Number of Islands | LC 200 | DFS/BFS marking visited land |
+| Number of Provinces | LC 547 | Count connected components |
+| Rotting Oranges | LC 994 | BFS level traversal |
+| Word Ladder | LC 127 | BFS shortest transformation path |
+
+**Example Files:**  
+- `NumberOfIslands.java`  
+- `NumberOfProvinces.java`  
+- `RottingOranges.java`  
+- `WordLadder.java`
+
+---
+
+## 🧩 7. Advanced / Optional Problems
+
+| Problem | Concept | Approach |
+|----------|----------|----------|
+| Course Schedule | Topological sort + cycle detection | Kahn’s Algorithm |
+| Alien Dictionary | Build graph from word order | Topological sort |
+| Detect Bridges / Articulation Points | Tarjan’s algorithm | DFS + discovery/low time |
+
+---
+
+## ✅ Placement Focus Summary
+
+| Company Type | Focus Areas | Problem Count |
+|---------------|--------------|----------------|
+| Service-based | BFS, DFS, Connected Components, Cycle detection, Grid problems | ~15–18 |
+| Mid / Product-based | Add Dijkstra, Topological Sort, MST, Bellman-Ford | ~25–28 |
+
+---
+
+## 📚 Resources
+- [LeetCode – Graph Tag](https://leetcode.com/tag/graph/)
+- [GFG Graphs](https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/)
+- [Visual Algo Graphs](https://visualgo.net/en/graphds)
+
+---
+
+> 💡 **Tip:** Visualize edges and flows while solving.  
+> Most graph problems reduce to **BFS / DFS / shortest path / connectivity** — once you see the pattern, they become straightforward.
+
+
 
