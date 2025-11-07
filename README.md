@@ -1,65 +1,86 @@
-# 📘 DSA Preparation Repository
+# 📘 Complete DSA Preparation Repository
 
-This repository contains my **Data Structures & Algorithms (DSA)** practice, organized topic-wise.  
-I use it to practice for placements and to keep **notes + code** in one place.  
-
----
-
-## 📂 Structure
-
---
-
-
-## 📝 Notes
-- 📄 [DSA Short Notes (Markdown)](notes/DSA_short_notes.md) *(readable directly on GitHub)*  
-- 📄 [DSA Short Notes (PDF)](notes/DSA_short_notes.pdf)  
-
-These notes cover **Arrays + Strings**:  
-- Sliding Window, Prefix Sum, Hashing, Two Pointers, Matrix, Greedy.  
-- String patterns: Two Pointers, HashMap, Stack, Sliding Window, Parsing, DP.  
+This repository contains my **Data Structures & Algorithms (DSA)** practice, organized topic-wise with notes and implementations.  
+It is designed for **placement preparation, problem-solving, and interview readiness**.
 
 ---
 
-## ✅ Topics Covered So Far
-### 🔹 Arrays
-- Sliding Window  
-- Prefix Sum & Hashing  
-- Two Pointers  
-- HashMap / HashSet  
-- Sorting & Greedy  
-- Leaders in Array  
-- Matrix Problems  
-- Advanced Mixed  
+## 📂 Repository Structure
 
-### 🔹 Strings
-- Two Pointers (Palindrome, Reverse)  
-- HashMap / HashSet (Anagrams, Substrings)  
-- Stack (Valid Parentheses)  
-- Sliding Window (Longest Substring, Minimum Window)  
-- Parsing (atoi, Roman ↔ Integer, Add Binary)  
-- Dynamic Programming (Palindrome Substring, Decode Ways)  
+| Folder | Description |
+|--------|-------------|
+| Arrays | Array problems: Sliding Window, Prefix Sum, Hashing, Two Pointers, Matrix, Advanced patterns |
+| Strings | String problems: Two Pointers, Hashing, Sliding Window, Stack, Parsing, DP |
+| LinkedList | Singly, Doubly, Circular Linked Lists, and advanced operations |
+| Stack And Queues | Stack, Queue, Deque, Monotonic Stack problems |
+| Heaps | Min Heap, Max Heap, Priority Queue patterns |
+| Trees | Binary Trees (BT), Binary Search Trees (BST), Tree traversals & problems |
+| Graphs | Graph algorithms: BFS, DFS, Dijkstra, Shortest Paths, MST |
+| Recursion | Classic recursion & backtracking problems |
+| Dynamic Programming | DP patterns: 1D, 2D, Knapsack, Matrix DP, String DP |
+| Tries | Trie data structure & pattern problems |
+| Sorting and Searching | Binary Search, Merge/Quick Sort, Search patterns |
+| MathAndBitManipulation | Math, Bit Manipulation, Number Theory problems |
+| Notes | Consolidated notes, patterns, and cheat sheets |
+| arrays problem wise | Problem-wise solutions for arrays |
+| CheetSheetMustDO.md | Must-do problem list & important concepts |
+
+---
+
+## ✅ Topics Covered
+
+### 🔹 Arrays & Strings
+- Sliding Window, Prefix Sum, Hashing  
+- Two Pointers, Sorting, Greedy  
+- Matrix problems, Subarrays, Leaders, Patterns  
+
+### 🔹 Linked Lists
+- Singly, Doubly, Circular  
+- Reversal, Merge, Detect Cycle  
+
+### 🔹 Stacks & Queues
+- Classic stack/queue operations  
+- Monotonic stack, Sliding Window maximum  
+
+### 🔹 Trees
+- BFS, DFS, Inorder/Preorder/Postorder traversals  
+- BST operations & problems  
+
+### 🔹 Graphs
+- BFS, DFS, Topological Sort  
+- Dijkstra, Shortest Paths, Minimum Spanning Tree  
+
+### 🔹 Dynamic Programming
+- 1D, 2D DP, Knapsack, Matrix DP, String DP  
+- Classic DP patterns & optimization  
+
+### 🔹 Miscellaneous
+- Heaps, Tries, Recursion/Backtracking, Math & Bit Manipulation  
+- Sorting & Searching patterns  
 
 ---
 
 ## 🎯 Placement Strategy
-- Revise Arrays + Strings.  
-- Next → Linked List, Stack, Queue, Binary Search.  
-- Later → Trees, Graphs, DP basics.  
-- Target ~200–250 quality problems before placements.  
+
+- Solve problems topic-wise and **master patterns**.  
+- Revise notes and **cheat sheets regularly**.  
+- Solve **medium → hard problems** across all DSA topics.  
+- Target **200–300 quality problems** before placements.  
 
 ---
 
 ## ⚡ How to Use
-- Browse by topic folders (`arrays/`, `strings/`).  
-- Refer to **notes** for approaches & patterns.  
-- Code is written in **Java** (DSA language for placements).  
+
+- Navigate by topic folders for practice and reference.  
+- Use notes to understand approaches & patterns.  
+- All code is in **Java** (primary language for placements).  
+- Problems are categorized by **difficulty** where applicable.  
 
 ---
 
-### ✨ Author
+## ✨ Author
+
 **Raheem**  
-- 🎓 B.Tech CSE Student  
-- 🎯 Aspiring Software Engineer
-- 💻 Focus: DSA, Java, AI/ML  
-
----
+🎓 B.Tech CSE Student  
+🎯 Aspiring Software Engineer  
+💻 Focus: DSA, Competitive Programming, Java, AI/ML
